@@ -51,6 +51,17 @@ class Main {
                     // Displaying all students
                     operations.displayStudents();
                     break;
+                case 3:
+                // Searching for a student by PRN
+                System.out.print("Enter PRN to search: ");
+                String searchPrn = sc.nextLine();
+                Student foundStudent = operations.searchByPrn(searchPrn);
+                if (foundStudent != null) {
+                    System.out.println("Student Found: " + foundStudent);
+                } else {
+                    System.out.println("Student with PRN " + searchPrn + " not found.");
+                }
+                break;
 
 
             }
