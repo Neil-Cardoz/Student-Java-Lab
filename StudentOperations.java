@@ -54,6 +54,15 @@ public class StudentOperations {
         }
         return null;
     }
-
+    // Function to update a student's details based on PRN
+    public boolean updateStudent(String prn, Student updatedStudent) {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getPrn().equals(prn)) {
+                students.set(i, updatedStudent);
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
