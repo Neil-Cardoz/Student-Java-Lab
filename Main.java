@@ -88,6 +88,41 @@ class Main {
                     }
                     break;
 
+                case 6:
+                    // Updating a student's details
+                    System.out.print("Enter PRN of the student to update: ");
+                    String updatePrn = sc.nextLine();
+                    Student existingStudent = operations.searchByPrn(updatePrn);
+                    if (existingStudent != null) {
+                        System.out.print("Enter new Name: ");
+                        String newName = sc.nextLine();
+                        System.out.print("Enter new Date of Birth (DD-MM-YYYY): ");
+                        String newDob = sc.nextLine();
+                        System.out.print("Enter new Marks: ");
+                        double newMarks = sc.nextDouble();
+                        sc.nextLine(); // Consume newline
 
+                        Student updatedStudent = new Student(updatePrn, newName, newDob, newMarks);
+                        boolean isUpdated = operations.updateStudent(updatePrn, updatedStudent);
+                        if (isUpdated) {
+                            System.out.println("Student updated successfully.");
+                        } else {
+                            System.out.println("Update failed.");
+                        }
+                    } else {
+                        System.out.println("Student with PRN " + updatePrn + " not found.");
+                    }
+                    break;
+                case 7:
+                    // Deleting a student
+                    System.out.print("Enter PRN of the student to delete: ");
+                    String deletePrn = sc.nextLine();
+                    boolean isDeleted = operations.deleteStudent(deletePrn);
+                    if (isDeleted) {
+                        System.out.println("Student deleted successfully.");
+                    } else {
+                        System.out.println("Student with PRN " + deletePrn + " not found.");
+                    }
+                    break;
             }
 }
