@@ -3,14 +3,12 @@
 class Student{
 		private String name;
 		private long prn;
-		private int Position;
 		private String dob;
 		private double marks;
 
 		public Student(String name, long prn, int Position){
 			setName(name);
 			setPRN(prn);
-			setPosition(Position);
 			setDob(dob);
 			setMarks(marks);
 
@@ -30,14 +28,6 @@ class Student{
 		
 		public long getPRN(){
 			return this.prn;
-		}
-		
-		public void setPosition(int Position){
-			this.Position = Position;
-		}
-		
-		public int getPosition(){
-			return this.Position;
 		}
 
 		public void setDob(String dob){ this.dob = dob; }
