@@ -1,41 +1,59 @@
-//Student.java
+/*
+ * Student.java
+ * Description: This file contains the definition of the Student class with attributes: prn, name, dob, and marks.
+ */
 
-class Student{
-		private String name;
-		private long prn;
-		private String dob;
-		private double marks;
+public class Student {
+	private String prn;
+	private String name;
+	private String dob;
+	private double marks;
 
-		public Student(String name, long prn, int Position){
-			setName(name);
-			setPRN(prn);
-			setDob(dob);
-			setMarks(marks);
+	// Constructor to initialize Student object
+	public Student(String prn, String name, String dob, double marks) {
+		this.prn = prn;
+		this.name = name;
+		this.dob = dob;
+		this.marks = marks;
+	}
 
-		}
-		
-		public void setName(String name){
-			this.name = name;
-		}
+	// Getter and Setter methods for each attribute
 
-		public String getName(){
-			return this.name;
-		}
-		
-		public void setPRN(long prn){
-			this.prn = prn;
-		}
-		
-		public long getPRN(){
-			return this.prn;
-		}
+	public String getPrn() {
+		return prn;
+	}
 
-		public void setDob(String dob){ this.dob = dob; }
+	public void setPrn(String prn) {
+		this.prn = prn;
+	}
 
-		public String getDob(){ return this.dob; }
+	public String getName() {
+		return name;
+	}
 
-		public void setMarks(double marks){ this.marks = marks; }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-		public double getMarks(){ return this.marks; }
-		
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public double getMarks() {
+		return marks;
+	}
+
+	public void setMarks(double marks) {
+		this.marks = marks;
+	}
+
+	// Overriding toString() to display student details
+	@Override
+	public String toString() {
+		return "PRN: " + prn + ", Name: " + name + ", DoB: " + dob + ", Marks: " + marks;
+	}
 }
