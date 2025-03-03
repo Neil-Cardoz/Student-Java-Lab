@@ -28,7 +28,20 @@ class Main {
             System.out.println("8. Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
-            sc.nextLine(); // Consume newline
+            sc.nextLine();
+
+            switch (choice) {
+                case 1:
+                    // Adding a new student
+                    System.out.print("Enter PRN: ");
+                    String prn = sc.nextLine();
+                    System.out.print("Enter Name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter Date of Birth (DD-MM-YYYY): ");
+                    String dob = sc.nextLine();
+                    System.out.print("Enter Marks: ");
+                    double marks = sc.nextDouble();
+                    sc.nextLine(); // Consume newline
 
     }
 }
