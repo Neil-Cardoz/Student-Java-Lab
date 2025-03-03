@@ -1,0 +1,5 @@
+//Student.java
+
+class Student{
+		
+}
