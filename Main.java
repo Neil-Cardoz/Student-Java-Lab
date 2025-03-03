@@ -43,5 +43,15 @@ class Main {
                     double marks = sc.nextDouble();
                     sc.nextLine(); // Consume newline
 
-    }
+                    Student newStudent = new Student(prn, name, dob, marks);
+                    operations.addStudent(newStudent);
+                    break;
+
+                case 2:
+                    // Displaying all students
+                    operations.displayStudents();
+                    break;
+
+
+            }
 }
