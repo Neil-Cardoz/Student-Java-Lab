@@ -27,4 +27,18 @@ public class StudentOperations {
             }
         }
     }
+
+    // Function to search for a student by PRN
+    public Student searchByPrn(String prn) {
+        for (Student student : students) {
+            if (student.getPrn().equals(prn)) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+
+
+
 }
