@@ -38,6 +38,15 @@ public class StudentOperations {
         return null;
     }
 
+    // Function to search for a student by name
+    public Student searchByName(String name) {
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) {
+                return student;
+            }
+        }
+        return null;
+    }
 
 
 
