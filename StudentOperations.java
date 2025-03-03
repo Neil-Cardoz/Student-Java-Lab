@@ -47,7 +47,13 @@ public class StudentOperations {
         }
         return null;
     }
-
+    // Function to search for a student by position (index)
+    public Student searchByPosition(int position) {
+        if (position >= 0 && position < students.size()) {
+            return students.get(position);
+        }
+        return null;
+    }
 
 
 }
