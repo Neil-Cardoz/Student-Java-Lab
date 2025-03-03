@@ -64,5 +64,14 @@ public class StudentOperations {
         }
         return false;
     }
-
+    // Function to delete a student by PRN
+    public boolean deleteStudent(String prn) {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getPrn().equals(prn)) {
+                students.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }
