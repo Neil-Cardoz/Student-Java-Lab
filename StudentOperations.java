@@ -17,4 +17,14 @@ public class StudentOperations {
         students.add(student);
         System.out.println("Student added successfully.");
     }
+    // Function to display all students
+    public void displayStudents() {
+        if (students.isEmpty()) {
+            System.out.println("No students available.");
+        } else {
+            for (int i = 0; i < students.size(); i++) {
+                System.out.println("Position " + i + ": " + students.get(i));
+            }
+        }
+    }
 }
