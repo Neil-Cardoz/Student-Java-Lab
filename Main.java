@@ -124,5 +124,17 @@ class Main {
                         System.out.println("Student with PRN " + deletePrn + " not found.");
                     }
                     break;
+                case 8:
+                    // Exiting the program
+                    System.out.println("Exiting the program. Goodbye!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
+            }
+        } while (choice != 8);
+
+        sc.close();
             }
 }
