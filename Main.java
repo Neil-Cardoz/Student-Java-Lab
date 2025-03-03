@@ -10,6 +10,10 @@ import java.util.*;
 
 class Main {
     public static void main(String args[]) {
-        
+        Scanner sc = new Scanner(System.in);
+        StudentOperations operations = new StudentOperations();
+        int choice;
+
+
     }
 }
