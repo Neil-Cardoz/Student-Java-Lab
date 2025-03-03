@@ -75,5 +75,19 @@ class Main {
                     }
                     break;
 
+                case 5:
+                    // Searching for a student by position (index)
+                    System.out.print("Enter position index to search: ");
+                    int pos = sc.nextInt();
+                    sc.nextLine(); // Consume newline
+                    Student foundByPos = operations.searchByPosition(pos);
+                    if (foundByPos != null) {
+                        System.out.println("Student at position " + pos + ": " + foundByPos);
+                    } else {
+                        System.out.println("Invalid position.");
+                    }
+                    break;
+
+
             }
 }
